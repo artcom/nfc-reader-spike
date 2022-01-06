@@ -7,7 +7,7 @@
     "watch": "nodemon src/main.js"
   },
   "engines": {
-    "node": "16.13.1"
+    "node": "16"
   },
   "dependencies": {
     "nfc-pcsc": "^0.8.1"
