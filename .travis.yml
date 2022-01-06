@@ -2,6 +2,8 @@ os: windows
 language: node_js
 node_js:
 - 16
+cache:
+  npm: false
 before_install:
   - choco install python
   - npm config set msvs_version 2017
