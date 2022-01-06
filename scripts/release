@@ -4,7 +4,7 @@ DIST_DIR="dist"
 ARTIFACTS_DIR="artifacts"
 
 echo "Building"
-mkdir "${ARTIFACTS_DIR}"
+mkdir "${DIST_DIR}"
 pkg -t win src/main.js -o $DIST_DIR/nfc-reader-spike
 
 echo "Packaging"
