@@ -1,6 +1,6 @@
 {
   "name": "nfc-event-publisher",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "debug": "node --inspect-brk src/main.js",
     "start": "node src/main.js",
