@@ -1,0 +1,20 @@
+os: windows
+language: node_js
+node_js:
+- 16.13.1
+before_install:
+  - npm install -g pkg
+install:
+  - npm install --production
+script: "./scripts/release"
+if: tag IS present
+deploy:
+  provider: releases
+  api_key:
+    secure: "yX+SBJvD7LbKR2XDB9yNgAZEXtFfxSTOmY59ANS+dB9nDjEvAhAL1LSpubMT2q5bBUgAzLXTmhBwaH+tuNz8c04rh7KMPYHG9FSwDdRyMMl8Sgf/e8cFb/wJOwDPuiaAXBEmZ6JgG3yqrtii7r+mmHBlsnha3ZasJE/UGANSJAzn1iz8QLVOQUMAIpvSLmbYe3COf00zf3in3e50SMCJAwQ3+hK7FEK8CYbAEojCAJccK6ZpqC9RXWw08sehIiSNpwhNhwTrtQ9NWHXP8xZ8JgtvOk3hSyY5yDx3mGq+OZu4ZoJ/h/7Ck2Kbbk82VRGctAKxvSYCMNntvRz20S+yx7cdDUd/bVU4MIJAJUbxL3gJN80yYaWAICGJd8lvzJKBoC26H8MdTr5H6qLdvzlPQmR+inucIEL85McTfzVLrAfLkxxAFTU8RA9mZhKhPiRNkj/hLKwPnEk8TEV8N6rDpKtfVBq63OuOrHTNVvAhB9c38RGzMLJ7spZaZnSilQOc1ckhBKipd1/G8+x4qtOEs75sNB/m4NrIWx/gBDcMMZInorDH1CMVtfMJSiPNFQ5ALCR6oRYlDObgP4/E+J5ve2UDz2YjfwLOYaArtMzQZ6nyrNO/de2NZpWLLfbRWoXj9O/7kLQBS89d8//+gmG01hz+H/sHQi56gMyN00ZEKbY="
+  file_glob: true
+  file: artifacts/*
+  skip_cleanup: true
+  on:
+    repo: artcom/nfc-reader-spike
+    tags: true    
