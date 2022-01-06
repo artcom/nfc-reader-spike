@@ -7,6 +7,10 @@ before_install:
   - npm install -g pkg
 install:
   - npm install --production
+cache:
+  directories:
+    - $HOME/AppData/Local/Temp/chocolatey
+    - /C/Python310
 script: "./scripts/release"
 if: tag IS present
 deploy:
