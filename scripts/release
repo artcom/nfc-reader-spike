@@ -5,6 +5,5 @@ ARTIFACTS_DIR="artifacts"
 echo "Packaging"
 mkdir "${ARTIFACTS_DIR}"
 cd dist
-cp -a ../node_modules node_modules
 echo {\"branch\": \"$TRAVIS_BRANCH\", \"commit\": \"$TRAVIS_COMMIT\", \"build\": $TRAVIS_BUILD_NUMBER} > build.json
 7z a -tzip "../${ARTIFACTS_DIR}/nfc-reader-spike-${TRAVIS_BRANCH}.zip" *
