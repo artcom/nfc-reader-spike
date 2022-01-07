@@ -1,6 +1,6 @@
 {
   "name": "nfc-reader-spike",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "scripts": {
     "debug": "node --inspect-brk src/main.js",
     "start": "node src/main.js",
@@ -23,7 +23,9 @@
   "license": "MIT",
   "pkg": {
     "assets": "node_modules/@*",
-    "targets": ["node16-macos"],
+    "targets": [
+      "node16-macos"
+    ],
     "outputPath": "dist"
   }
 }
