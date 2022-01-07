@@ -2,9 +2,6 @@ set -eo pipefail
 
 ARTIFACTS_DIR="artifacts"
 
-echo "Building"
-pkg package.json
-
 echo "Packaging"
 mkdir "${ARTIFACTS_DIR}"
 cd dist

@@ -12,6 +12,7 @@ before_install:
 install:
   - npm install --production
   - ls node_modules
+  - pkg package.json
 script: "./scripts/release"
 if: tag IS present
 deploy:
