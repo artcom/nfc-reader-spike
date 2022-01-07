@@ -24,7 +24,7 @@
   "pkg": {
     "assets": "node_modules/@*",
     "targets": [
-      "node16-macos"
+      "node16-win"
     ],
     "outputPath": "dist"
   }
