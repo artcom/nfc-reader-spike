@@ -1,11 +1,13 @@
 {
-  "name": "nfc-event-publisher",
+  "name": "nfc-reader-spike",
   "version": "0.0.16",
   "scripts": {
     "debug": "node --inspect-brk src/main.js",
     "start": "node src/main.js",
     "watch": "nodemon src/main.js"
   },
+  "main": "src/main.js",
+  "bin": "src/main.js",
   "engines": {
     "node": "16"
   },
@@ -18,5 +20,10 @@
     "eslint-plugin-import": "^2.25.3",
     "nodemon": "^2.0.15"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "pkg": {
+    "assets": "node_modules/@*",
+    "targets": ["node16-macos"],
+    "outputPath": "dist"
+  }
 }

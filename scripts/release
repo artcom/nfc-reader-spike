@@ -1,14 +1,12 @@
 set -eo pipefail
 
-DIST_DIR="dist"
 ARTIFACTS_DIR="artifacts"
 
 echo "Building"
-mkdir "${DIST_DIR}"
-pkg -t node16-win src/main.js -o $DIST_DIR/nfc-reader-spike
+pkg package.json
 
 echo "Packaging"
 mkdir "${ARTIFACTS_DIR}"
-cd "${DIST_DIR}"
+cd dist
 echo {\"branch\": \"$TRAVIS_BRANCH\", \"commit\": \"$TRAVIS_COMMIT\", \"build\": $TRAVIS_BUILD_NUMBER} > build.json
 7z a -tzip "../${ARTIFACTS_DIR}/nfc-reader-spike-${TRAVIS_BRANCH}.zip" *
