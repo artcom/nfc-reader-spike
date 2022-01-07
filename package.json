@@ -22,7 +22,6 @@
   },
   "license": "MIT",
   "pkg": {
-    "assets": "node_modules/@*",
     "targets": [
       "node16-win"
     ],
