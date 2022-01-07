@@ -6,11 +6,12 @@ cache:
   npm: false
 before_install:
   - choco install python
-  # - npm config set msvs_version 2017
-  # - npm config set python "C:\Python310\python.exe"
+  - npm config set msvs_version 2017
+  - npm config set python "C:\Python310\python.exe"
   - npm install -g pkg
 install:
   - npm install --production
+  - ls node_modules
 script: "./scripts/release"
 if: tag IS present
 deploy:
