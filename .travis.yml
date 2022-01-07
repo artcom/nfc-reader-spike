@@ -11,9 +11,9 @@ before_install:
   - npm install -g pkg
 install:
   - npm install --production
-  - ls node_modules
+script:
   - pkg package.json
-script: "./scripts/release"
+  - ./scripts/release
 if: tag IS present
 deploy:
   provider: releases
