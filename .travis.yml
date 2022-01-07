@@ -5,11 +5,9 @@ node_js:
 cache:
   npm: false
 before_install:
-  - choco install python3 --version=3.9.9
-  - npm config set msvs_version 2017
-  - ls /C/Python39
-  - npm config set python "C:\Python39\python.exe"
-  - npm config get python
+  - choco install python
+  # - npm config set msvs_version 2017
+  # - npm config set python "C:\Python310\python.exe"
   - npm install -g pkg
 install:
   - npm install --production
