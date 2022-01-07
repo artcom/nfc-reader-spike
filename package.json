@@ -1,6 +1,6 @@
 {
   "name": "nfc-reader-spike",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "scripts": {
     "debug": "node --inspect-brk src/main.js",
     "start": "node src/main.js",
