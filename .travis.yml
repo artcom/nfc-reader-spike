@@ -1,7 +1,7 @@
 os: windows
 language: node_js
 node_js:
-- 16.13.0
+- 16
 cache:
   npm: false
 before_install:
